@@ -4,6 +4,20 @@
     /*mod.config(function($httpProvider, $cookies){
         $http.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
     })*/
+    mod.service('fileUpload', ['$http', 'independentsContext', function ($http, context) {
+        this.uploadFileToUrl = function(file, uploadUrl){
+            var fd = new FormData();
+            fd.append('file', file);
+            $http.post(uploadUrl, fd, {
+                transformRequest: angular.identity,
+                headers: {'Content-Type': undefined}
+            })
+            .success(function(){
+            })
+            .error(function (){
+            });
+        }
+    }]);
 
     mod.service('independentsService', ['$http', 'independentsContext', function ($http, context) {
 
@@ -28,6 +42,6 @@
                 url: '/jobs'
             });
         };
-
     }]);
+    
 })(window.angular);

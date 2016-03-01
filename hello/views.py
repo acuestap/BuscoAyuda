@@ -109,6 +109,7 @@ def registerIndependent(request):
         name = objs['name']
         lastName = objs['lastName']
         imageFileUrl = objs['imageFileUrl']
+        imageFile = objs['imageFile']
         phoneNumber = objs['phoneNumber']
         yearsOfExperience = objs['yearsOfExperience']
 
@@ -126,6 +127,7 @@ def registerIndependent(request):
         independent.email=email
         independent.lastName=lastName
         independent.imageFileUrl=imageFileUrl
+        independent.imageFile=imageFile
         independent.job=jobObject
         independent.name=name
         independent.phoneNumber=phoneNumber

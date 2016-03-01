@@ -134,6 +134,10 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 STATIC_URL = '/static/'
 
+#Donde se guardaran todos los archivos estaticos queluego se manejaran con Amazon S3
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'static/images')
+MEDIA_URL =  'static/images/'
+
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
     os.path.join(PROJECT_ROOT, 'static'),

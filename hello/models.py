@@ -15,6 +15,7 @@ class Independent(models.Model):
     phoneNumber = models.CharField(max_length=20,blank=True)
     email = models.CharField(max_length=100,blank=True)
     imageFileUrl = models.CharField(max_length=1000,blank=True,default='')
+    imagenFile = models.ImageField(upload_to='/static/images',blank=True)
     user = models.OneToOneField(User,null=True)
     job = models.ForeignKey(Job,null=True)
 

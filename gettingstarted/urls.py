@@ -23,4 +23,4 @@ urlpatterns = [
     url(r'^register', hello.views.registerIndependent, name='registerIndependent'),
     url(r'^comments/', hello.views.registerComment, name='registerComment'),
     url(r'^detail', hello.views.detail, name='detail'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

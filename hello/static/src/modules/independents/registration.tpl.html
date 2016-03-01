@@ -3,7 +3,7 @@
         <div class="col-md-4 col-md-offset-4">
             <div class="page-header">
 
-                <form id="formRegister" name="formRegister">
+                <form id="formRegister" name="formRegister" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="control-label" for="name">Nombre:</label>
                         <input type="text" id="name" name="name" class="form-control" value="{{ name }}" ng-required="true" required="true">
@@ -35,6 +35,10 @@
                     <div class="form-group">
                         <label class="control-label" for="name">Imagen:</label>
                         <input type="text" id="imageFileUrl" name="imageFileUrl" class="form-control" value="{{ name }}" required="true">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="imageFile">Imagen2:</label>
+                        <input type="file" file-model="myFile" id="imageFile" name="imageFile"  required="true">
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="name">Usuario:</label>
