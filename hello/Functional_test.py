@@ -29,8 +29,8 @@ class FunctionalTest(TestCase):
         experiencia = self.browser.find_element_by_id('years_of_experience')
         experiencia.send_keys('5')
 
-        self.browser.find_element_by_xpath(
-            "//select[@id='job']/option[text()='Desarrollador Web']").click()
+        #self.browser.find_element_by_xpath("//select[@id='job']/option[text()='Desarrollador Web']").click()
+
         telefono = self.browser.find_element_by_id('phone_number')
         telefono.send_keys('30456876')
 
@@ -38,7 +38,7 @@ class FunctionalTest(TestCase):
         correo.send_keys('acuestap@gmail.com')
 
         imagen = self.browser.find_element_by_id('imageFileUrl')
-        imagen.send_keys('C:\Users\Public\Pictures\Sample Pictures\desierto.jpg')
+        imagen.send_keys('C:\Users\Public\Pictures\Sample Pictures\Desierto.jpg')
 
         nombreUsuario = self.browser.find_element_by_id('username')
         nombreUsuario.send_keys('acuesta1')
@@ -49,6 +49,8 @@ class FunctionalTest(TestCase):
         botonGrabar = self.browser.find_element_by_id('id_grabar')
         botonGrabar.click()
         self.browser.implicitly_wait(3)
-        span = self.browser.find_element(By.XPATH, '//span[text()="Abimelec Cuesta"]')
+        #span = self.browser.find_element(By.XPATH, '//span[text()="Abimelec Cuesta"]')
+        span = self.browser.find_element_by_id('id_span')
+        span.text('Abimelec Cuesta')
 
         self.assertIn('Abimelec Cuesta', span.text)
