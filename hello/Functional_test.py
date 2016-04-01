@@ -63,3 +63,4 @@ class FunctionalTest(TestCase):
         h2 = self.browser.find_element_by_id('name')
 
         self.assertIn('Abimelec Cuesta', h2.text)
+
