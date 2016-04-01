@@ -54,3 +54,12 @@ class FunctionalTest(TestCase):
         #span.send_keys('Abimelec Cuesta')
 
         #self.assertIn('Abimelec Cuesta', nombreUsuario.text)
+
+    def test_verDetalle(self):
+        self.browser.get('http://localhost:8000')
+        span = self.browser.find_element_by_id('name')
+        span.click()
+
+        h2 = self.browser.find_element_by_id('name')
+
+        self.assertIn('Abimelec Cuesta', h2.text)
